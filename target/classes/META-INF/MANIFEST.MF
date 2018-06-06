@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: studiohub-login
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Muthu
+Implementation-Vendor-Id: com.studiohub.login.application
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/studiohub-login
+Created-By: Maven Integration for Eclipse
+
