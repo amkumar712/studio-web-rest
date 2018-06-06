@@ -257,4 +257,20 @@ public class User {
 	public void setLastUpdDt(Timestamp lastUpdDt) {
 		this.lastUpdDt = lastUpdDt;
 	}
+
+	/**
+	 * @return the roles
+	 */
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	/**
+	 * @return the userLogin
+	 */
+	public UserLogin getUserLogin() {
+		return userLogin;
+	}
+	
+	
 }

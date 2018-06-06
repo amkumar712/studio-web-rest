@@ -6,6 +6,7 @@ package com.studiohub.login.application.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import com.studiohub.login.application.model.User;
@@ -22,6 +23,8 @@ public class CustomUserDetailService {
 	UserRepository userRepository;
 	
 	public User getUserByUserId(String userId){
+		
+		//UserDetails
 		
 //		Optional<User> optionalUser = Optional.ofNullable(userRepository.getOne(userId));
 		

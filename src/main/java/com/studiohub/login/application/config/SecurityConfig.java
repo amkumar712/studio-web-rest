@@ -5,14 +5,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.studiohub.login.application.manager.UserManager;
+import com.studiohub.login.application.manager.IUserManager;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
-	UserManager userManager;
+	IUserManager userManager;
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -30,7 +31,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userManager);
+		auth.userDetailsService(userManager).passwordEncoder(getPasswordEncoder());
+	}
+
+	private PasswordEncoder getPasswordEncoder() {
+		return new PasswordEncoder() {
+			@Override
+			public String encode(CharSequence rawPassword) {
+				return rawPassword.toString();
+			}
+
+			@Override
+			public boolean matches(CharSequence rawPassword, String encodedPassword) {
+				return true;
+			}
+		};
 	}
 	
 	
