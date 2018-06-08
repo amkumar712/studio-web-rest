@@ -76,6 +76,7 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
 	private UserLogin userLogin;
+	
 	/**
 	 * @return the userId
 	 */

@@ -4,6 +4,7 @@
 package com.studiohub.login.application.manager;
 
 import com.studiohub.login.application.mapper.IBomMapper;
+import com.studiohub.login.application.response.UserInfo;
 
 /**
  * @author Muthu
@@ -16,5 +17,7 @@ public abstract class AbstractUserManager implements IUserManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public abstract UserInfo getUserInfo(String userId);
 
 }

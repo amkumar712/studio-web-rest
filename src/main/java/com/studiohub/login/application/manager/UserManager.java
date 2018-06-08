@@ -12,7 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.studiohub.login.application.model.User;
+import com.studiohub.login.application.model.UserAuthenticate;
 import com.studiohub.login.application.repository.UserRepository;
+import com.studiohub.login.application.response.UserInfo;
 
 /**
  * @author Muthu
@@ -23,6 +25,14 @@ public class UserManager extends AbstractUserManager implements UserDetailsServi
 
 	@Autowired
 	UserRepository userRepository;
+	
+
+	@Override
+	public UserInfo getUserInfo(String userId) {
+		
+		return null;
+	}
+
 	
 	/** 
 	 * This method is used for the Login purpose. Once the user is retrieved from the 
@@ -35,16 +45,7 @@ public class UserManager extends AbstractUserManager implements UserDetailsServi
 		
 		userOptional.orElseThrow(() -> new UsernameNotFoundException("User is not available"));
 		
-		userOptional.ifPresent((user) -> {
-			
-			
-			
-			
-		});
-		
-		
-		return null;
+		return userOptional.map(UserAuthenticate::new).get();
 	}
-
 
 }
