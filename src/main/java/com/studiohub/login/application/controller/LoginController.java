@@ -13,6 +13,7 @@ import com.studiohub.login.application.manager.IUserManager;
 import com.studiohub.login.application.manager.UserManager;
 import com.studiohub.login.application.model.User;
 import com.studiohub.login.application.model.UserAuthenticate;
+import com.studiohub.login.application.response.UserInfo;
 import com.studiohub.login.application.service.CustomUserDetailService;
 
 /**
@@ -24,33 +25,17 @@ import com.studiohub.login.application.service.CustomUserDetailService;
 public class LoginController {
 	
 	@Autowired
-	CustomUserDetailService service;
-	
-	@Autowired
 	UserManager userManager;
 	
-	@GetMapping("/test")
-	public void login() {
-		System.out.println("Entering into Login Method");
-		User user = service.getUserByUserId("amkumar712");
-		System.out.println(user.getFirstName());
-		System.out.println("After service call");
+	@PostMapping("/login")
+	public UserInfo login() {
 		
-		UserDetails userAuth = userManager.loadUserByUsername("amkumar712");
+		UserInfo userInfo = userManager.getUserInfo("amkumar712");
 		
-		System.out.println(userAuth.getUsername());
-		System.out.println(userAuth.getPassword());
+		System.out.println(userInfo.getUserId());
+		System.out.println(userInfo.getEmail());
 		
-		// login -- no need of authentication
-		
-//		UserDetails userDetails = new UserDetails();
-//		userDetails.setEmail(user.getEmail());
-//		userDetails.setFirstName(user.getFirstName());
-//		userDetails.setLastName(user.getLastName());
-//		userDetails.setGender(user.getGender());
-//		userDetails.setMiddleName(user.getMiddleName());
-		
-//		return userDetails;
+		return userInfo;
 	}
 	
 	@PostMapping("/authenticate")

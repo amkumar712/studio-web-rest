@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import com.studiohub.login.application.model.User;
 import com.studiohub.login.application.model.UserAuthenticate;
 import com.studiohub.login.application.repository.UserRepository;
+import com.studiohub.login.application.response.MessageInfo;
 import com.studiohub.login.application.response.UserInfo;
 
 /**
@@ -30,7 +31,18 @@ public class UserManager extends AbstractUserManager implements UserDetailsServi
 	@Override
 	public UserInfo getUserInfo(String userId) {
 		
-		return null;
+		
+		UserInfo info = new UserInfo();
+		info.setEmail("testEmail@gmail.com");
+		info.setUserId(userId);
+		
+		MessageInfo msg = new MessageInfo();
+		msg.setMessage("User Identified");
+		msg.setMessageCode("1");
+		
+		info.setMsg(msg);
+		
+		return info;
 	}
 
 	
