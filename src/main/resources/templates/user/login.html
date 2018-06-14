@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>StudioHub | Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<div class='container'>
+		
+			<div class="header clearfix">
+		        <h3 class="text-muted" align="center">Studio Hub</h3>
+		      </div>
+			<div class="login_form">
+				<div class="login_title">Login</div>
+				<div class="box">
+					<form>
+			            <label>Email or User ID</label>
+			            <input type="text" name="userid" id="userid" />
+			
+			            <a class="link right" href="#">Forget Password?</a>
+			            <label>Password</label>
+			            <input type="password" name="password" id="password" />
+			
+			            <div class="remember_me"><input type="checkbox" />Remember me</div>
+			
+			            <input type="submit" class="btn" value="Login" />
+			
+			            <div class="dont_have_acct">Don't have an account? <a href="#" class="link">Sign up</a> here</div>
+			
+			        </form>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>

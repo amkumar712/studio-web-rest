@@ -1,0 +1,147 @@
+
+.login_title {
+  text-align: center;
+  padding: 40px 0 30px;
+  font-family: inherit;
+  font-size: 24px;
+  color: #666;
+}
+
+.signup_form {
+
+}
+
+.login_form {
+  width: 400px;
+  height: 380px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+
+.signup_form {
+  width: 400px;
+  height: 450px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+
+.box {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.box label {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #777;
+  font-weight: normal;
+}
+
+.box input {
+  width: 96%;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  padding: 7px 5px;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4em;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  border: 1px solid #ccc;
+}
+
+.box input[type="checkbox"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 20% !important;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  border: 1px solid #0099e5;
+  outline-style: none;
+  outline-width: 0px;
+}
+
+.btn {
+  width: 60% !important;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px !important;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.signup_btn {
+  width: 100% !important;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px !important;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.btn:hover {
+  background-color: #50ba53;
+}
+
+.btn:focus {
+  outline-style: none;
+  outline-width: 0px;
+}
+
+.btn:active {
+  outline-style: none;
+  outline-width: 0px;
+}
+
+.right {
+  float: right;
+}
+
+.link {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  color: #0099e5;
+}
+
+.dont_have_acct {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.remember_me {
+  width: 45% !important;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #777;
+  padding-top: 0px;
+  padding-right: 0;
+}
