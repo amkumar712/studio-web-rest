@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>StudioHub | Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+	
+		<h3>User Profile</h3>
+		<table border="1">
+			<tr>
+				<th style="padding:5px;">User ID </th>
+				<th style="padding:5px;">Name </th>
+				<th style="padding:5px;">Email </th>
+				<th style="padding:5px;">Gender </th>
+			</tr>
+			<th:block th:each="user : ${user}">
+			    <tr>
+			        <td th:text="${user.userId}" style="padding:5px;">userId'</td>
+			        <td th:text="${user.fullName}" style="padding:5px;">userId'</td>
+			        <td th:text="${user.email}" style="padding:5px;">userId'</td>
+			        <td th:text="${user.gender}" style="padding:5px;">userId'</td>
+			    </tr>
+			</th:block>
+		</table>
+
+
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form th:action="@{/logout}" method="post">
+                
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign Out"/>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+	</body>
+</html>

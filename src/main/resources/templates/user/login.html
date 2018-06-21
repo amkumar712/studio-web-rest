@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>StudioHub | Login</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<div class='container'>
@@ -16,9 +16,16 @@
 			<div class="login_form">
 				<div class="login_title">Login</div>
 				<div class="box">
-					<form>
+				
+					<div th:if="${param.error}">
+                        <div class="alert alert-danger">
+                            Invalid Username Or Password.
+                        </div>
+                    </div>
+				
+					<form th:action="@{/login}" method="post">
 			            <label>Email or User ID</label>
-			            <input type="text" name="userid" id="userid" />
+			            <input type="text" name="username" id="username" />
 			
 			            <a class="link right" href="#">Forget Password?</a>
 			            <label>Password</label>
